@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neon button</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #00041d;
+    }
+
+    a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 160px;
+        height: 40px;
+        background: #00072f;
+        text-align: center;
+        line-height: 40px;
+        padding: 5px 15px;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-size: 25px;
+        overflow: hidden;
+        transition: 5s;
+        border-radius: 40px;
+    }
+
+    a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: rgba(255, 20, 152, 0);
+        filter: blur(4px);
+        transition: 5s;
+        z-index: -1;
+
+    }
+
+    a:hover {
+        color: #fff;
+        box-shadow: -15px 0 50px rgba(255, 20, 152, 1) ,15px 0 50px rgba(122, 20, 225, 1);
+        text-shadow: 0 0 10px rgba(225, 225, 225, 0.50), 0 0 25px rgba(225, 225, 225, 0.50), 0 0 35px rgba(225, 225, 225, 0.50);
+        
+    }
+
+    a:hover:before {
+        background: rgba(255, 20, 152, 1);
+        transform: scaleX(5);
+    }
+
+    a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: rgba(122, 20, 225, 0);
+        filter: blur(4px);
+        transition: 5s;
+        z-index: -1;
+        mix-blend-mode: lighten;
+
+    }
+
+    a:hover:after {
+        background: rgba(122, 20, 225, 1);
+        transform: scaleX(5);
+    }
+</style>
+
+<body>
+    <a href="#">NEON</a>
+
+    
+</body>
+
+</html>
